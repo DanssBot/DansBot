@@ -2258,7 +2258,7 @@ ${samu}◦ 🪀version de${samu} *WhatsApp* : *${samu330.user.phone.wa_version}*
 ===============================
 
 
-_Lista de MENUs_
+_Lista de mwnus_
 
 ${bodyM} ${prefix}menu1 *(Menu de Media*
 ${bodyM} ${prefix}menu2 *(Menu de Sticker)*
