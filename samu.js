@@ -5232,7 +5232,7 @@ case 'simi':
 
 samu330.updatePresence(from, Presence.composing)
 texto = body.slice(5)
-sim = await getJson(`https://api.simsimi.net/v1/?text=${texto}&lang=es`)
+sim = await getJson(`https://api.simsimi.net/v1/?text=${texto}&lang=es&cf=true`)
 smuu = (`${sim.success}`)
 samu330.sendMessage(from, smuu, MessageType.text, {quoted: { key: {
 fromMe: false,
