@@ -1560,7 +1560,7 @@ _https://www.youtube.com/watch?v=rOPBe6O-k3M_`
                 const packname1001 = `${aaa}`          
 		const author1001 = args.join(' ')
                 exif.create(packname1001, author1001, `stickwm_${sender}`)          
-		reply('*⌛Procesando....'*')
+		reply('*⌛Procesando....*')
                 await ffmpeg(`${media22}`)
 		.inputFormat(media22.split('.')[4])
 		.on('start', function (cmd) {
