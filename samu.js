@@ -65,6 +65,7 @@ const msg = require("./lib/message")
 const wa = require("./lib/wa")
 const Exif = require('./lib/exif');
 const exif = new Exif();
+const tiktokdl = requiere ("./lib/tiktokdl")
 const { recognize } = require('./lib/ocr');
 const help = require("./lib/help")
 const yts = require('yt-search')
@@ -1157,6 +1158,7 @@ ${bodyM} ${prefix}twit *(videos de Twitter)*
 ${bodyM} ${prefix}ytmp3 *(Descarga de musica por link)*
 ${bodyM} ${prefix}ytmp4 *(Descarga de videos por link)*
 ${bodyM} ${prefix}fb *(Link de FaceBook)*
+${bodyM} ${prefix}tiktokdl *(Link de FaceBook)*
 ${bodyM} ${prefix}mfire *(Link de mediafire)*
 ${bodyM} ${prefix}tomp3 *(Videos a audio)*
 ${bodyM} ${prefix}letra *(Busca la letra de una cancion)`
@@ -3674,6 +3676,19 @@ ig = await getJson(`https://api.lolhuman.xyz/api/instagram?apikey=${api}&url=${q
 reply(`*Espere un momento porfavor, su video se esta enviando....*`)
 sendFileFromUrl(ig.result, video, {quoted: fvid, caption: '🍒Samu330 | NyanBot💠', duration: 999999999})
 addFilter(from)
+break
+///////// //////////////////////////////tiktik//////
+case 'tiktok':
+                   case 'tiktokdl':
+                   case 'tiktoknowm':
+if (!c) return reply('Linknya?')
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${c}`).catch(e => {
+reply(mess.error.api)
+})
+console.log(res)
+sendMediaURL(from, `${res.result.nowatermark}`)
 break
 		
 //Fake Doxing By Samu330
