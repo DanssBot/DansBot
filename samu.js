@@ -65,7 +65,6 @@ const msg = require("./lib/message")
 const wa = require("./lib/wa")
 const Exif = require('./lib/exif');
 const exif = new Exif();
-const tiktokdl = requiere ("./lib/tiktokdl")
 const { recognize } = require('./lib/ocr');
 const help = require("./lib/help")
 const yts = require('yt-search')
