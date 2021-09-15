@@ -1693,9 +1693,9 @@ _https://www.youtube.com/watch?v=rOPBe6O-k3M_`
 			}
 
 
-			switch (commandstik) {
+			 {
 	
-				case "paxuDk3LoZENYGIbqq0jI7+xHaEaDfGaWGtVJt/Vyzg=":
+				
 					//////////Aqui iban las redes socialesy el si no vez el mrnu//////
 					
 
@@ -3555,7 +3555,7 @@ case 'play':
 		"listMessage": {
 				  "title": "🌬 *DESCARGAS DE AUDIO!!*",
 				  "description": `\n✍🏻Informacion de su Audio.\n\n*°Subido hace* ${plist.all[0].ago}\n\n*°Vistas :* ${plist.all[0].views}\n\n*°Duracion :* ${plist.all[0].timestamp}\n\n*°Canal :* ${plist.all[0].author.name}\n\n*°Link del Canal :* ${plist.all[0].author.url}`,
-				  "buttonText": "SELECCIONA UN FORMATO DE DESCARGA",
+				  "buttonText": "SELECCIONA UM FORMATO",
 				  "listType": "SINGLE_SELECT",
 				  "sections": [
 					{ "title": `[ ${plist.all[0].title} ]`,
@@ -3652,6 +3652,7 @@ break
 case 'tiktok':
                    case 'tiktokdl':
                    case 'tiktoknowm':
+if (!isRegister) return reply(mess.only.usrReg)
 if (!c) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -5460,7 +5461,7 @@ samu330.query({
 json:["action", "invite", `${args[0].replace('https://chat.whatsapp.com/','')}`]
 })
 reply('Ya entre al grupo😉')
-samu330.sendMessage(id, `*Hola* 🙋🏻‍♂️\nSoy DansBot)_ [ @${samunum.split('@')[0]} ],\n@${sender.split('@')[0]} me ha asignado como *BOT* para este grupo *(@${subject.split('@')[0]})*\n\n*Informacion de este grupo:*\n\👑Creador: @${owner.split('@')[0]}\n📚 Fecha de creacion: ${Date(creation * 1000)}\n\nTotal de participantes: ${participants}*\nQuien escribio la descripcion? ${descOwner}\n✏ Descripcion:\n${desc}\n\n*Porfavor sige mis reglas, para leer mis reglas escribe:*\n${prefix}reglas\nPorfavor sigelas o atente a las consecuencias⚠\n*Quedo a su dispocicion, no me agan sentir mal.... por que yo tambien tengo corazon😣*`, MessageType.text, {quoted: { key: {
+samu330.sendMessage(id, `*Hola* 🙋🏻‍♂️\nSoy DansBot)_ [ @${samunum.split('@')[0]} ],\n@${sender.split('@')[0]} me ha asignado como *BOT* para este grupo *(@${subject.split('@')[0]})*\n\n*Informacion de este grupo:*\n\👑Creador: @${owner.split('@')[0]}\n📚 Fecha de creacion: ${Date(creation * 1000)}\n\nDescripcion escrita por? ${descOwner}\n✏ Descripcion:\n${desc}\n\n*Porfavor sige mis reglas, para leer mis reglas escribe:*\n${prefix}reglas\nPorfavor sigelas o atente a las consecuencias⚠\n*Quedo a su dispocicion, no me agan sentir mal.... por que yo tambien tengo corazon😣*`, MessageType.text, {quoted: { key: {
 fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
 }, message: {"documentMessage": { "title": `${subject}`, 'jpegThumbnail': fs.readFileSync('./src/ara.png')}}}})
