@@ -1692,8 +1692,10 @@ _https://www.youtube.com/watch?v=rOPBe6O-k3M_`
 				break
 			}
 
-
-			 {
+                        switch (commandstik) {
+	
+				case "paxuDk3LoZENYGIbqq0jI7+xHaEaDfGaWGtVJt/Vyzg=":
+			 
 	
 				
 					//////////Aqui iban las redes socialesy el si no vez el mrnu//////
